@@ -1,0 +1,7 @@
+requests
+starlette
+uvicorn
+databases
+aiosqlite
+jinja2
+
