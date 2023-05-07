@@ -1,10 +1,13 @@
+from os import path
 from app.database.databases import database
 from starlette.responses import JSONResponse
 
 from starlette.requests import Request
 from starlette.templating import Jinja2Templates
 
-templates = Jinja2Templates(directory='app/view')
+print(f'{path.abspath(".")}/app/view')
+
+templates = Jinja2Templates(directory=f'{path.abspath(".")}/app/view')
 
 async def home(request: Request):
     return templates.TemplateResponse('index.html', {'request': request})

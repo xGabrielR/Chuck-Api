@@ -1,3 +1,6 @@
+from os import path
 
 # Hide Passwords and Hosts...
-DB_URL = "sqlite:////home/grc/arep/api/chuck_api/database.sqlite"
+DB_URL = f"sqlite:///{path.abspath('.')}/database.sqlite"
+
+print(DB_URL)
