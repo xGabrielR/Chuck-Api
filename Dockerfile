@@ -1,3 +1,4 @@
+# From Python Base Image
 FROM python:3.9.5-slim
 
 WORKDIR c-api
@@ -10,7 +11,8 @@ EXPOSE 5000
 
 CMD uvicorn main:app --host "0.0.0.0" --port "5000"
 
-
+# From Ubuntu Base Image
+#
 #FROM ubuntu
 #
 #WORKDIR c-api
